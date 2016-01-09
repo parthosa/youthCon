@@ -25,6 +25,7 @@ body
 	height:auto;
 	display: block;
 	margin: 0 auto;
+	position: relative;
 }
 
 canvas{
@@ -32,11 +33,9 @@ canvas{
 }
 
 .holder svg {
-	position: absolute;
-	margin:auto;
-	top:10%;
-	left: 30%;
-}
+	    position: relative;
+    margin: 0 auto;
+    display: block;}
 
 
 #layer-1 {
@@ -91,6 +90,23 @@ canvas{
 .shape-3, .shape-6 {
 	opacity: 0.5;
 }
+
+
+h1 {
+font-family: 'Oswald', sans-serif;
+font-weight: 400;
+font-size: 46px;
+letter-spacing: -3.5px;
+color: #434343;
+position: relative;
+    margin: 0 auto;
+    text-align: center;
+    top: -290px;
+}
+h1 span {
+color: #198f93;
+}
+
 
 .head {
 	text-align: center;
