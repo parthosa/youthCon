@@ -95,3 +95,23 @@ canvas{
 .shape-3, .shape-6 {
 	opacity: 0.5;
 }
+
+.head {
+	text-align: center;
+	font-size: 3em;
+	font-family:'Oswald' sans-serif;
+}
+.shead {
+	position: relative;
+	text-align: center;
+	top: 10%;
+	font-size: 3em;
+}
+.ss {
+	font-size: 2em
+}
+.info {
+	text-align: justify;
+	font-size: 1.5em;
+	margin: 7%;
+}
