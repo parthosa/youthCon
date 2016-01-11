@@ -6,10 +6,12 @@
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type='text/javascript' src='js/jquery.particleground.min.js'></script>
 	<script type="text/javascript" src="js/jquery.fullpage.min.js"></script>
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullpage.min.css">
     <link rel="icon" href="img/favicon.ico" type="image/ico">
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald" />
 	<link rel="stylesheet" href="css/animate.css">
@@ -32,12 +34,37 @@
 		$(document).ready(function() {
    		$('#fullpage').fullpage({
    		 sectionsColor: ['none', '#4BBFC3', '#7BAABE', 'whitesmoke','tomato','#B388FF'],
-
+   		 anchors: ['section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7'],
+   		 onLeave: function(index, nextIndex, direction){
+        var pass= "#section" + nextIndex;
+        console.log(pass);
+        var ele= document.getElementById(pass);
+        asscls(ele);
+        }
 		});
 		});
+		$document.ready(function() {
+			$.fn.fullpage.moveTo('section1');
+		})
 	</script>
 </head>
 <body>
+<nav class="cd-vertical-nav">
+	<ul>
+		<li><a id="#section1" class="active" onclick="$.fn.fullpage.moveTo('section1');asscls(this);"><span class="label">Home</span></a></li>
+		<li><a id="#section2" onclick="$.fn.fullpage.moveTo('section2');asscls(this);"><span class="label">about</span></a></li>
+		<li><a id="#section3" onclick="$.fn.fullpage.moveTo('section3');asscls(this);"><span class="label">Motivation</span></a></li>
+		<li><a id="#section4" onclick="$.fn.fullpage.moveTo('section4');asscls(this);"><span class="label">Objective</span></a></li>
+		<li><a id="#section5" onclick="$.fn.fullpage.moveTo('section5');asscls(this);"><span class="label">Structure</span></a></li>
+		<li><a id="#section6" onclick="$.fn.fullpage.moveTo('section6');asscls(this);"><span class="label">Pre-Registration</span></a></li>
+		<li><a id="#section7" onclick="$.fn.fullpage.moveTo('section7');asscls(this);"><span class="label">Contact</span></a></li>
+	</ul>
+</nav><!-- .cd-vertical-nav -->
+
+<button class="cd-nav-trigger cd-image-replace">Open navigation<span aria-hidden="true"></span></button>
+
+
+
 <div id="fullpage">
 
 <div class="section">
@@ -147,5 +174,14 @@
 </div>
 
 </div>
+
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script type="text/javascript">
+	function asscls(div) {
+		$(".active").removeClass("active");				
+		var className=div.getAttribute("class");
+		div.className="active";
+	};
+</script>
 </body>
 </html>
