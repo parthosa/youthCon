@@ -34,30 +34,28 @@
 	// FULLPAGE INTIALISATION
 		$(document).ready(function() {
    		$('#fullpage').fullpage({
-   		 sectionsColor: ['none', 'rgba(75, 191, 195,0.4)', 'rgba(123, 170, 190,0.4)', 'rgba(245,245,245,0.4)','rgba(255,99,71,0.7)','rgba(179, 136, 255,0.5)','rgba(0,221,51,0.2)'],
+   		 sectionsColor: ['none', 'rgba(89, 196, 197,0.5)','rgba(0, 200, 248,0.3)', 'rgba(255,195,60,0.5)','rgba(251,226,180,0.5)','rgba(179, 136, 255,0.5)','rgba(240,241,238,0.5)'],
+   		 
  anchors: ['section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7'],
    		 onLeave: function(index, nextIndex, direction){
         var pass= "#section" + nextIndex;
-        console.log(pass);
+        
         var ele= document.getElementById(pass);
         asscls(ele);
         }
 		});
 		});
-		$document.ready(function() {
-			$.fn.fullpage.moveTo('section1');
-		})
 	</script>
 </head>
 <body>
 <nav class="cd-vertical-nav">
 	<ul>
 		<li><a id="#section1" class="active" onclick="$.fn.fullpage.moveTo('section1');asscls(this);"><span class="label">Home</span></a></li>
-		<li><a id="#section2" onclick="$.fn.fullpage.moveTo('section2');asscls(this);"><span class="label">about</span></a></li>
+		<li><a id="#section2" onclick="$.fn.fullpage.moveTo('section2');asscls(this);"><span class="label">About</span></a></li>
 		<li><a id="#section3" onclick="$.fn.fullpage.moveTo('section3');asscls(this);"><span class="label">Motivation</span></a></li>
 		<li><a id="#section4" onclick="$.fn.fullpage.moveTo('section4');asscls(this);"><span class="label">Objective</span></a></li>
 		<li><a id="#section5" onclick="$.fn.fullpage.moveTo('section5');asscls(this);"><span class="label">Structure</span></a></li>
-		<li><a id="#section6" onclick="$.fn.fullpage.moveTo('section6');asscls(this);"><span class="label">Pre-Registration</span></a></li>
+		<li><a id="#section6" onclick="$.fn.fullpage.moveTo('section6');asscls(this);"><span class="label" style="line-height:1.2em">Pre-Registration</span></a></li>
 		<li><a id="#section7" onclick="$.fn.fullpage.moveTo('section7');asscls(this);"><span class="label">Contact</span></a></li>
 	</ul>
 </nav><!-- .cd-vertical-nav -->
@@ -119,8 +117,8 @@
 </div>
 
 <div class="section">
-	<div class="head">about LEAP</div>
-	<div class="info">
+	<div id="sec1head" class="head">About LEAP</div>
+	<div id="sec1text" class="info">
 		Leading Endeavour to Achieve Progress (LEAP) is an initiative for all the student run social volunteer organisations across the country. It is an effort of people who feel that the pace of development has become stagnant with the passage of time. In spite of having all the sources and means, most of the organizations stand at the same place where they were ten years ago. LEAP is not just an initiative to improve the efficiency of organizations but also a way through which creative and good ideas can be shared and used for the betterment of the society.
 	</div>
 </div>
@@ -167,7 +165,7 @@
 
 <div class="section">
 	<div class="head">Contact</div>
-	<div class="info">
+	<div class="info" style="text-align:center;">
 		Contact us: +91 77288359554<br>
 		Write us at: <a href="mailto:leapbits@gmail.com">leapbits@gmail.com</a><br>
 		Follow us on <a href="https://www.facebook.com/YouthConPilani/">Facebook</a>
@@ -183,6 +181,19 @@
 		var className=div.getAttribute("class");
 		div.className="active";
 	};
+/*
+	var element = $("#sec1head").offset().top;
+$(window).scroll(function(){
+  var y = $(window).scrollTop();
+  console.log(y,element);
+    if (y >= element-100){
+    	$("#sec1head").addClass("animated");
+     	$("#sec1head").addClass("fadeInUp");
+     	    }
+});*/
+
+
+
 </script>
 </body>
 </html>

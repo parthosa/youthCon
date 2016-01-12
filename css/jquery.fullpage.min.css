@@ -48,7 +48,7 @@ display:table-cell;
 vertical-align:middle;
 width:100%;
 height:100%;
-padding-left: 9%;
+padding-left: 7%;
 }
 
 .fp-slidesContainer {
@@ -82,7 +82,7 @@ border-width:38.5px 34px 38.5px 0;
 }
 
 .fp-controlArrow.fp-next {
-right:8%;
+right:3%;
 border-color:transparent transparent transparent #fff;
 border-width:38.5px 0 38.5px 34px;
 }
