@@ -12,6 +12,7 @@ html, body {
 }
 body
 {
+  overflow-x: hidden !important;
 	overflow:hidden;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
@@ -23,6 +24,7 @@ body
 
 	width:70%;
 	height:auto;
+  left:-1%;
 	display: block;
 	margin: 0 auto;
 	position: relative;
@@ -112,11 +114,14 @@ color: #198f93;
 	text-align: center;
 	font-size: 3em;
 	font-family: Oswald, sans-serif;
+  position: relative;
+    top: -20%;
 }
 .shead {
 	position: relative;
 	text-align: center;
-	top: 10%;
+	top: 14%;
+      left: 4%;
 	font-size: 3em;
 	font-family: Oswald, sans-serif;
 }
@@ -126,9 +131,8 @@ color: #198f93;
 .info {
 	text-align: justify;
 	font-size: 1.5em;
-	margin: 7%;
-	margin-right: 15%;
-	margin-top: 4%;
+      margin: 13px auto;
+    padding: 0px 100px;
 }
 a , a:hover, a:visited, a:active{
 	text-decoration: none;
