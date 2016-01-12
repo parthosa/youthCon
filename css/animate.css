@@ -1195,7 +1195,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 @-webkit-keyframes fadeInUp {
   0% {
-    opacity: 0;
+    opacity: 0 ;
     -webkit-transform: translateY(20px);
     transform: translateY(20px);
   }
@@ -1224,7 +1224,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .fadeInUp {
-  -webkit-animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp ;
   animation-name: fadeInUp;
 }
 
