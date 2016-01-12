@@ -9,9 +9,10 @@
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullpage.min.css">
-    <link rel="icon" href="img/favicon.ico" type="image/ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="img/fav.png" type="image/png">
+    <meta name="viewport" content="width=device-width" />
+
+<link href='https://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald" />
 	<link rel="stylesheet" href="css/animate.css">
@@ -33,8 +34,8 @@
 	// FULLPAGE INTIALISATION
 		$(document).ready(function() {
    		$('#fullpage').fullpage({
-   		 sectionsColor: ['none', '#4BBFC3', '#7BAABE', 'whitesmoke','tomato','#B388FF'],
-   		 anchors: ['section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7'],
+   		 sectionsColor: ['none', 'rgba(75, 191, 195,0.4)', 'rgba(123, 170, 190,0.4)', 'rgba(245,245,245,0.4)','rgba(255,99,71,0.7)','rgba(179, 136, 255,0.5)','rgba(0,221,51,0.2)'],
+ anchors: ['section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7'],
    		 onLeave: function(index, nextIndex, direction){
         var pass= "#section" + nextIndex;
         console.log(pass);
